@@ -25,7 +25,9 @@
           <v-icon>mdi-home</v-icon>
         </v-list-item-action>
         <v-list-item-content>
-          <v-list-item-title>Home</v-list-item-title>
+          <v-list-item-title>
+            <router-link to="/home">Home</router-link>
+          </v-list-item-title>
         </v-list-item-content>
       </v-list-item>
       <v-list-item>
@@ -33,7 +35,9 @@
           <v-icon>mdi-information</v-icon>
         </v-list-item-action>
         <v-list-item-content>
-          <v-list-item-title>About</v-list-item-title>
+          <v-list-item-title>
+            <div style="cursor: pointer" @click="getData">Get Data</div>
+          </v-list-item-title>
         </v-list-item-content>
       </v-list-item>
       <v-list-item>
@@ -41,7 +45,9 @@
           <v-icon>mdi-email</v-icon>
         </v-list-item-action>
         <v-list-item-content>
-          <v-list-item-title>Contact</v-list-item-title>
+          <v-list-item-title>
+            <router-link to="/home">Contact</router-link>
+          </v-list-item-title>
         </v-list-item-content>
       </v-list-item>
     </v-list>
@@ -49,7 +55,7 @@
 </template>
 
 <script>
-    import { mapGetters } from "vuex";
+    import { mapGetters, mapActions } from "vuex";
 
     export default {
         name: "Navbar",
@@ -61,5 +67,13 @@
         computed: {
             ...mapGetters("auth", ["user"]),
         },
+        methods: {
+            ...mapActions("workdata", ["getWorkData"]),
+
+            getData() {
+                this.getWorkData();
+            },
+
+        }
     }
 </script>

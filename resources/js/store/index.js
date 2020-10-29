@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import auth from "./auth";
+import workdata from "./workdata";
 
 Vue.use(Vuex);
 
@@ -22,6 +23,7 @@ export default new Vuex.Store({
     actions: {},
 
     modules: {
-        auth
+        auth,
+        workdata
     }
 });

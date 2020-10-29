@@ -12,10 +12,18 @@ class PostController extends Controller
     {
         $posts = auth()->user()->posts;
 
+        if ($posts) {
+            return response()->json([
+                'success' => true,
+                'data' => $posts
+            ], 200);
+        }
+
         return response()->json([
-            'success' => true,
-            'data' => $posts
-        ]);
+            'success' => false,
+            'message' => 'Posts not found '
+        ], 400);
+
     }
 
     public function show($id)
