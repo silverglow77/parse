@@ -2,6 +2,7 @@ import Vue from "vue";
 import Vuex from "vuex";
 import auth from "./auth";
 import workdata from "./workdata";
+import gamedata from "./gamedata";
 
 Vue.use(Vuex);
 
@@ -24,6 +25,7 @@ export default new Vuex.Store({
 
     modules: {
         auth,
-        workdata
+        workdata,
+        gamedata
     }
 });

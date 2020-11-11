@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+//use App\Http\Controllers;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +17,9 @@ Route::get('/', function () {
 //    return view('welcome');
     return view('app');
 });
+
+Route::get('/test', [App\Http\Controllers\TestController::class, 'index'])->name('test');
+Route::post('/test', [App\Http\Controllers\TestController::class, 'start'])->name('starttest');
 /*
 Route::get('/home', function () {
 //    return view('welcome');

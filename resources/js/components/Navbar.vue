@@ -32,21 +32,22 @@
       </v-list-item>
       <v-list-item>
         <v-list-item-action>
-          <v-icon>mdi-information</v-icon>
+          <v-icon>mdi-account-multiple</v-icon>
         </v-list-item-action>
         <v-list-item-content>
           <v-list-item-title>
-            <div style="cursor: pointer" @click="getData">Get Data</div>
+            <router-link to="/users">Users</router-link>
+          <!--  <div style="cursor: pointer" @click="getData">Get Data</div> -->
           </v-list-item-title>
         </v-list-item-content>
       </v-list-item>
       <v-list-item>
         <v-list-item-action>
-          <v-icon>mdi-email</v-icon>
+          <v-icon>mdi-gamepad-variant</v-icon>
         </v-list-item-action>
         <v-list-item-content>
           <v-list-item-title>
-            <router-link to="/home">Contact</router-link>
+            <router-link to="/game">Games</router-link>
           </v-list-item-title>
         </v-list-item-content>
       </v-list-item>

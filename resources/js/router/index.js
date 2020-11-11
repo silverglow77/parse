@@ -35,6 +35,16 @@ const routes = [
             component: () => import(/* webpackChunkName: "home" */ "../views/Home.vue")
         },
         {
+            path: "/game",
+            name: "Game",
+            component: () => import(/* webpackChunkName: "home" */ "../views/Game.vue")
+        },
+        {
+            path: "/users",
+            name: "Users",
+            component: () => import(/* webpackChunkName: "home" */ "../views/Users.vue")
+        },
+        {
             path: "/login",
             name: "Login",
             beforeEnter: guest,

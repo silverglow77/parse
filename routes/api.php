@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\LoginController;
 use App\Http\Controllers\Api\PostController;
+use App\Http\Controllers\Api\GameController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -30,4 +31,5 @@ Route::prefix('/user')->group(function (){
 
 Route::group(['middleware' => ['auth:api']], function () {
     Route::resource('posts', PostController::class);
+    Route::resource('games', GameController::class);
 });
