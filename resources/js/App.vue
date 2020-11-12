@@ -4,11 +4,10 @@
         <navbar ref="navbar"></navbar>
         <app-header @toggle-drawer="$refs.navbar.drawer = !$refs.navbar.drawer"></app-header>
         <v-main>
-          <v-container>
+          <div class="main-wrapper">
             <router-view />
-     <!--       <h1 v-show="!user">You need to Login</h1>
-            <h1 v-show="user">Greetings for logging in</h1>  -->
-          </v-container>
+          </div>
+
         </v-main>
         <v-footer />
       </v-app>
@@ -46,5 +45,5 @@
 </script>
 
 <style scoped>
-
+  .main-wrapper {margin-left: 10px !important; margin-right: 10px !important;}
 </style>

@@ -13,7 +13,7 @@
 </template>
 
 <script>
-    import { mapGetters } from "vuex";
+    import { mapGetters, mapActions } from "vuex";
 
     export default {
         name: "Users",
@@ -29,9 +29,20 @@
                 ],
             }
         },
+        created() {
+            this.getData();
+        },
         computed: {
             ...mapGetters("workdata", ["work"]),
-        }
+        },
+        methods: {
+            ...mapActions("workdata", ["getWorkData"]),
+
+            getData() {
+                this.getWorkData();
+            },
+
+        },
     }
 </script>
 

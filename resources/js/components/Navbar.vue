@@ -68,13 +68,6 @@
         computed: {
             ...mapGetters("auth", ["user"]),
         },
-        methods: {
-            ...mapActions("workdata", ["getWorkData"]),
 
-            getData() {
-                this.getWorkData();
-            },
-
-        }
     }
 </script>

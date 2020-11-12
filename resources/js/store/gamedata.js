@@ -20,7 +20,7 @@ export default {
     actions: {
         getGameData({ commit }) {
             axios
-                .get(process.env.MIX_VUE_APP_API_URL + "game")
+                .get(process.env.MIX_VUE_APP_API_URL + "games")
                 .then(response => {
                     console.log(response.data);
                     commit("setGameData", response.data);
